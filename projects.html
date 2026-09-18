@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <script defer src="CustomElements.js"></script>
+  <import-fonts></import-fonts>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <custom-header-template active-header="1"></custom-header-template>
+
+  <main>
+    <h1 class="page-title">Projects</h1>
+    <!-- ============ PROJECT 1 ============ -->
+    <article class="project-card" id="project-1">
+      <div class="project-media placeholder-visual" aria-hidden="true">
+
+      </div>
+      <div class="project-body">
+        <h2><a href="#" class="project-title-link"><span class="placeholder">SLORL</span></a></h2>
+        <p class="project-hook placeholder">
+          SLORL, an anagram of ROLLS. 
+          Roll through twenty progressively more difficult levels and get to the portals at the end. 
+          For an extra challenge, grab all the coins in each level. 
+          With your trusty hat along for the ride, anything is possible!
+        </p>
+
+        <dl class="meta-grid">
+          <div><dt>Role</dt><dd class="placeholder">Developer</dd></div>
+          <div><dt>Team</dt><dd class="placeholder">Solo</dd></div>
+          <div><dt>Engine / Tools</dt><dd class="placeholder">Unity, C#, Aseprite</dd></div>
+          <div><dt>Time</dt><dd class="placeholder">10 weeks</dd></div>
+        </dl>
+
+        <ul class="chip-list" aria-label="Design areas">
+          <li class="chip">Mechanic Design</li>
+          <li class="chip">Level Design</li>
+          <li class="chip">Art Design</li>
+          <li class="chip">API Integration</li>
+        </ul>
+
+        <details class="project-details" open>
+          <summary>Design breakdown</summary>
+          <div class="details-body">
+            <p class="placeholder"><strong>Key decisions:</strong>
+              <br>
+              - Art Style: I decided to go with a simple cutesy pixel art design since it made it easy to make all the artwork cohesive. 
+              The color palette was one that I had found online
+              <br>
+              <br>
+              - Mechanics: The swap mechanic was something I had in mind for a while, it just so happened that when combined with the rotation mechanic it turned out quite fun.
+              My favorite usage of the hat and rotation though are the interesting ways they interact with player movement. You can use the hat as a ramp to move in ways your player couldn't normally move.
+              This made for some interesting tech that some of the levels were based off of.
+            </p>
+            <p class="placeholder"><strong>Challenges:</strong> 
+              The most difficult part of developing SLORL was definitely level design. 
+              Making twenty increasingly difficult and compelling levels took longer than I would like to admit.
+            </p>
+            <p class="placeholder"><strong>Outcome:</strong> 
+              Sold a non-exclusive license to Armor Games, and got SLORL uploaded to other websites like Kongregate and Y8 Games. 
+              Game did well for itself, definitely has some flaws but it currently sits around 10k plays and a 71% rating.
+            </p>
+          </div>
+        </details>
+
+        <div class="project-links">
+          <a href="#" class="btn btn-small">Play build</a>
+          <a href="#" class="btn btn-small btn-ghost">Gameplay video</a>
+        </div>
+        <p class="hint">Replace <code>#</code> with your itch.io / GitHub / YouTube links. If a build isn&rsquo;t public, link the video first.</p>
+      </div>
+    </article>
+
+    <!-- ============ PROJECT 2 ============ -->
+    <article class="project-card" id="project-2">
+      <div class="project-media placeholder-visual" aria-hidden="true">
+        
+      </div>
+      <div class="project-body">
+        <h2><a href="#" class="project-title-link"><span class="placeholder">Bounty</span></a></h2>
+        <p class="project-hook placeholder">
+          Set in a magical forest, you play as a bounty hunter fighting against a horde of dangerous bugs.
+          Like many other popular rhythm games, you click to the beat in a four lane system. 
+        </p>
+
+        <dl class="meta-grid">
+          <div><dt>Role</dt><dd class="placeholder">Lead Developer</dd></div>
+          <div><dt>Team</dt><dd class="placeholder">Four</dd></div>
+          <div><dt>Engine / Tools</dt><dd class="placeholder">Unity, C#</dd></div>
+          <div><dt>Time</dt><dd class="placeholder">8 weeks</dd></div>
+        </dl>
+
+        <ul class="chip-list" aria-label="Design areas">
+          <li class="chip">Mechanic Design</li>
+          <li class="chip">Custom Beatmap System</li>
+          <li class="chip">Unity Implementation</li>
+        </ul>
+
+        <details class="project-details">
+          <summary>Design breakdown</summary>
+          <div class="details-body">
+            <p class="placeholder"><strong>My Contributions:</strong>
+              My team was made up of artists so I ended up developing the vast majority of the actual game. 
+              After we figured out our mechanics and systems I put it into C# code. 
+              I had full control over how I did this which led to some badly made systems, but I iterated and figured out a system we were all happy with. 
+              This was important since I needed my teamates who weren't accustomed to programming to understand as well.
+              I also created the actual Unity scenes and put the entire game together.
+              <br>
+              <br>
+              As a fun side mission over the summer, I decided to make a custom beatmap creator in the game itself. 
+              Working with I/O isn't my forte (especially with how Unity handles music files) but I got it to work. 
+              The system itself could use some work and more user options and control over beat timing but I am happy with the current state given the type of project this was. 
+            </p>
+            <p class="placeholder"><strong>Key decisions:</strong> &hellip;</p>
+            <p class="placeholder"><strong>Challenges:</strong> &hellip;</p>
+          </div>
+        </details>
+
+        <div class="project-links">
+          <a href="#" class="btn btn-small">Play build</a>
+          <a href="#" class="btn btn-small btn-ghost">Gameplay video</a>
+        </div>
+      </div>
+    </article>
+
+  
+    <h2 class="section-title">Arcade</h2>
+    <p class="hint" style="margin-bottom: 16px;">
+      Playable games live here. To embed a game from itch.io: open your game&rsquo;s
+      itch.io page, click <em>Embed</em>, copy the snippet, and paste it inside one
+      of the <code>.arcade-embed</code> boxes below, replacing the placeholder.
+      Keep each description to one short sentence.
+    </p>
+    <!--
+      itch.io embed example — paste inside .arcade-embed:
+      <iframe src="https://itch.io/embed/1234567" width="552" height="167" frameborder="0"><a href="https://yourname.itch.io/your-game">Your Game by Avy</a></iframe>
+    -->
+    <div class="arcade-grid">
+      <figure class="arcade-item">
+        <div class="arcade-embed placeholder-visual" aria-hidden="true">
+
+        </div>
+        <figcaption class="arcade-caption placeholder">[Game name] &mdash; one short sentence on what it is.</figcaption>
+      </figure>
+      <figure class="arcade-item">
+        <div class="arcade-embed placeholder-visual" aria-hidden="true">
+
+        </div>
+        <figcaption class="arcade-caption placeholder">[Game name] &mdash; one short sentence on what it is.</figcaption>
+      </figure>
+      <figure class="arcade-item">
+        <div class="arcade-embed placeholder-visual" aria-hidden="true">
+
+        </div>
+        <figcaption class="arcade-caption placeholder">[Game name] &mdash; one short sentence on what it is.</figcaption>
+      </figure>
+    </div>
+  </main>
+
+  <custom-footer-template></custom-footer-template>
+
+</body>
+
+</html>

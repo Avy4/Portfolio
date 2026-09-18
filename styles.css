@@ -1,0 +1,842 @@
+/* =========================================================
+   Avy — portfolio site
+   Dark theme built from a 4-color palette:
+   #303841 (background), #3A4750 (surface), #D72323 (accent),
+   #EEEEEE (foreground). Accent is used only for interactive
+   and "special content" moments — nav active state, links,
+   buttons, focus rings, the corner-frame motif, and quotes.
+   ========================================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* ---- Color: dark UI built from a 4-color palette ---- */
+  --paper: #303841;    /* page background */
+  --surface: #3A4750;  /* elevated surface — cards, chips, hairlines */
+  --ink: #EEEEEE;      /* primary text/foreground, light on dark */
+  --graphite: rgba(238, 238, 238, 0.6); /* muted/secondary text */
+  --hairline: #3A4750; /* subtle dividers, same tone as surface */
+  --accent: #D72323;   /* red — reserved for interactive/active moments */
+
+  /* ---- Type ---- */
+  /* FOT-Rodin ProN is a licensed Fontworks typeface — it isn't something
+     that can be embedded here, but it's declared first so any visitor
+     (or you, the site owner) who already has it installed or synced via
+     Adobe Fonts will see it automatically. M PLUS Rounded 1c is a free,
+     open substitute with a similar warm, rounded gothic feel, loaded via
+     Google Fonts in each page's <head> as the practical fallback. */
+  --font-main: "FOT-Rodin ProN", "RodinProN", "M PLUS Rounded 1c",
+    "Hiragino Maru Gothic ProN", "Yu Gothic", sans-serif;
+
+  --fs-meta: 0.875rem;
+  --fs-body: 1rem;
+  --fs-h3: 1.25rem;
+  --fs-h2: 1.75rem;
+  --fs-h1: clamp(2.5rem, 6vw, 3.5rem);
+
+  --content-width: 900px;
+  --radius-sm: 8px;
+  --radius-lg: 12px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-main);
+  font-size: var(--fs-body);
+  color: var(--ink);
+  background-color: var(--paper);
+  /* A faint dot grid — a quiet nod to the dot-paper the original
+     wireframes were sketched on. Barely visible by design. */
+  background-image: radial-gradient(
+    circle,
+    rgba(238, 238, 238, 0.05) 1px,
+    transparent 1.4px
+  );
+  background-size: 22px 22px;
+  line-height: 1.65;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+svg {
+  display: block;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+main {
+  flex: 1;
+  width: 100%;
+  max-width: var(--content-width);
+  margin: 0 auto;
+  padding: 56px 24px 96px;
+}
+
+main > *:first-child {
+  margin-top: 0;
+}
+
+.prose {
+  max-width: 60ch;
+}
+
+/* =========================================================
+   Header / nav
+   ========================================================= */
+
+.site-header {
+  border-bottom: 1px solid var(--ink);
+}
+
+.main-nav {
+  max-width: var(--content-width);
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px 28px;
+  padding: 26px 24px;
+  font-size: 1rem;
+}
+
+.nav-link {
+  padding: 6px 4px;
+  border: 1px solid transparent;
+  border-radius: 999px;
+}
+
+.nav-link:not(.active):hover {
+  color: var(--accent);
+}
+
+.nav-link.active {
+  border-color: var(--accent);
+  color: var(--accent);
+  padding: 6px 18px;
+  font-weight: 700;
+}
+
+/* =========================================================
+   Footer / contacts
+   ========================================================= */
+
+.site-footer {
+  border-top: 1px solid var(--ink);
+}
+
+.contacts {
+  max-width: var(--content-width);
+  margin: 0 auto;
+  padding: 36px 24px 52px;
+}
+
+.contacts-title {
+  font-size: var(--fs-h3);
+  font-weight: 700;
+  margin-bottom: 18px;
+}
+
+.contact-details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px 40px;
+  margin-bottom: 22px;
+  font-size: 0.95rem;
+}
+
+.contact-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 4px 2px;
+}
+
+.contact-item svg {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
+
+.contact-item:hover {
+  color: var(--accent);
+}
+
+.social-links {
+  display: flex;
+  gap: 12px;
+}
+
+.icon-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border: 1px solid var(--ink);
+  border-radius: 50%;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.icon-link svg {
+  width: 18px;
+  height: 18px;
+}
+
+.icon-link:hover {
+  background-color: var(--accent);
+  border-color: var(--accent);
+  color: var(--ink);
+}
+
+/* =========================================================
+   Corner-bracket frame — the one recurring "bold" motif,
+   echoing the corner marks drawn around the wireframe's
+   intro paragraph. Used sparingly (two spots on the site).
+   ========================================================= */
+
+.corner-frame {
+  position: relative;
+  padding: 34px;
+}
+
+.corner-frame::before,
+.corner-frame::after {
+  content: "";
+  position: absolute;
+  width: 22px;
+  height: 22px;
+}
+
+.corner-frame::before {
+  top: 0;
+  left: 0;
+  border-top: 2px solid var(--accent);
+  border-left: 2px solid var(--accent);
+}
+
+.corner-frame::after {
+  bottom: 0;
+  right: 0;
+  border-bottom: 2px solid var(--accent);
+  border-right: 2px solid var(--accent);
+}
+
+/* =========================================================
+   Home page
+   ========================================================= */
+
+.greeting {
+  font-size: var(--fs-h1);
+  font-weight: 800;
+  margin-bottom: 36px;
+  letter-spacing: -0.01em;
+}
+
+.intro-box {
+  margin-bottom: 8px;
+}
+
+.intro-box p {
+  text-align: left;
+  font-size: 1.05rem;
+}
+
+.placeholder {
+  color: var(--graphite);
+  font-style: italic;
+}
+
+/* =========================================================
+   Shared section heading
+   ========================================================= */
+
+.section-title {
+  font-size: var(--fs-h2);
+  font-weight: 700;
+  margin: 52px 0 26px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--hairline);
+}
+
+/* =========================================================
+   Projects page (legacy rows kept for compatibility)
+   ========================================================= */
+
+.project-row {
+  display: grid;
+  grid-template-columns: 190px 1fr;
+  gap: 26px;
+  padding: 30px 0;
+  border-bottom: 1px solid var(--hairline);
+}
+
+.project-row:last-of-type {
+  border-bottom: none;
+}
+
+.placeholder-visual {
+  aspect-ratio: 4 / 3;
+  border: 1px solid var(--ink);
+  border-radius: var(--radius-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--graphite);
+  background-color: rgba(238, 238, 238, 0.04);
+}
+
+.placeholder-visual svg {
+  width: 34px;
+  height: 34px;
+  opacity: 0.55;
+}
+
+.project-info h3 {
+  font-size: var(--fs-h3);
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.project-description {
+  margin-bottom: 14px;
+  max-width: 60ch;
+}
+
+.project-details summary {
+  cursor: pointer;
+  font-size: 0.9rem;
+  color: var(--graphite);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  list-style: none;
+}
+
+.project-details summary::-webkit-details-marker {
+  display: none;
+}
+
+.project-details summary::before {
+  content: "+";
+  font-weight: 700;
+  width: 14px;
+  color: var(--ink);
+}
+
+.project-details[open] summary::before {
+  content: "\2013";
+}
+
+.project-details[open] summary {
+  margin-bottom: 10px;
+}
+
+.project-details .details-body {
+  padding-left: 22px;
+  border-left: 2px solid var(--hairline);
+  font-size: 0.95rem;
+  max-width: 58ch;
+}
+
+.project-details .details-body p + p {
+  margin-top: 10px;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.gallery-item {
+  aspect-ratio: 1;
+  border: 1px solid var(--ink);
+  border-radius: var(--radius-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--graphite);
+  background-color: rgba(238, 238, 238, 0.04);
+}
+
+.gallery-item svg {
+  width: 28px;
+  height: 28px;
+  opacity: 0.55;
+}
+
+/* =========================================================
+   Resume page
+   ========================================================= */
+
+.resume-main {
+  max-width: 940px;
+}
+
+.resume-wrapper {
+  margin-bottom: 26px;
+}
+
+.resume-embed {
+  width: 100%;
+  height: 700px;
+  border: 1px solid var(--hairline);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  background-color: var(--surface);
+}
+
+.resume-embed iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+}
+
+.download-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 13px 26px;
+  border: 1px solid var(--accent);
+  border-radius: var(--radius-sm);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--ink);
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.download-link svg {
+  width: 17px;
+  height: 17px;
+}
+
+.download-link:hover {
+  background-color: var(--accent);
+  color: var(--ink);
+}
+
+/* =========================================================
+   Other Stuff page
+   ========================================================= */
+
+.quote-block {
+  margin: 44px 0;
+  padding-left: 26px;
+  border-left: 2px solid var(--accent);
+  font-size: 1.25rem;
+  font-style: italic;
+  max-width: 58ch;
+}
+
+.quote-block cite {
+  display: block;
+  margin-top: 14px;
+  font-size: 0.9rem;
+  font-style: normal;
+  color: var(--graphite);
+}
+
+.misc-block {
+  margin: 44px 0;
+}
+
+.misc-block .placeholder-visual {
+  aspect-ratio: 16 / 9;
+  width: 100%;
+  margin-bottom: 12px;
+}
+
+.misc-caption {
+  font-size: 0.9rem;
+  color: var(--graphite);
+}
+
+.link-list li {
+  border-bottom: 1px solid var(--hairline);
+}
+
+.link-list li:last-child {
+  border-bottom: none;
+}
+
+.link-list a {
+  display: block;
+  padding: 16px 2px;
+}
+
+.link-list a:hover {
+  color: var(--accent);
+}
+
+.link-list .link-note {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--graphite);
+  margin-top: 3px;
+}
+
+.playing-list li {
+  padding: 12px 2px;
+  border-bottom: 1px solid var(--hairline);
+}
+
+.playing-list li:last-child {
+  border-bottom: none;
+}
+
+/* =========================================================
+   Game-design tailoring — new components
+   ========================================================= */
+
+.eyebrow {
+  font-size: var(--fs-meta);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--graphite);
+  margin-bottom: 12px;
+}
+
+.page-title {
+  font-size: var(--fs-h1);
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  margin-bottom: 20px;
+}
+
+.hint {
+  font-size: 0.85rem;
+  color: var(--graphite);
+  margin-top: 10px;
+  max-width: 60ch;
+}
+
+.hint code {
+  font-family: ui-monospace, monospace;
+  font-size: 0.82rem;
+  background: var(--surface);
+  padding: 1px 5px;
+  border-radius: 4px;
+}
+
+.text-link {
+  font-weight: 700;
+  border-bottom: 1px solid var(--ink);
+  padding-bottom: 1px;
+}
+
+.text-link:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+/* Skill / discipline chips */
+.chip-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 0 0 6px;
+}
+
+.chip {
+  font-size: var(--fs-meta);
+  font-weight: 500;
+  border: 1px solid var(--ink);
+  border-radius: 999px;
+  padding: 6px 14px;
+  background: var(--surface);
+}
+
+/* Featured projects on home */
+.featured-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+  margin-top: 6px;
+}
+
+.featured-card {
+  border: 1px solid var(--ink);
+  border-radius: var(--radius-lg);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background: var(--surface);
+}
+
+.featured-card h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.featured-card p {
+  font-size: 0.95rem;
+  flex: 1;
+}
+
+/* CTA buttons */
+.cta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 34px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 13px 26px;
+  border: 1px solid var(--accent);
+  border-radius: var(--radius-sm);
+  font-size: 0.95rem;
+  font-weight: 700;
+  background: var(--accent);
+  color: var(--ink);
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.btn:hover {
+  background: transparent;
+  color: var(--accent);
+}
+
+.btn-ghost {
+  background: transparent;
+  color: var(--ink);
+  border-color: var(--ink);
+}
+
+.btn-ghost:hover {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+.btn-small {
+  padding: 9px 18px;
+  font-size: 0.85rem;
+}
+
+/* Case-study cards on projects page */
+.project-card {
+  border: 1px solid var(--ink);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  margin-bottom: 30px;
+  background: var(--surface);
+}
+
+.project-card + .project-card {
+  margin-top: 30px;
+}
+
+.project-media {
+  border: none;
+  border-bottom: 1px solid var(--ink);
+  border-radius: 0;
+  aspect-ratio: 16 / 9;
+}
+
+.project-body {
+  padding: 28px;
+}
+
+.project-body h2 {
+  font-size: var(--fs-h3);
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.project-hook {
+  margin-bottom: 18px;
+  max-width: 60ch;
+}
+
+.meta-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  margin-bottom: 18px;
+  padding: 16px 0;
+  border-top: 1px solid var(--hairline);
+  border-bottom: 1px solid var(--hairline);
+}
+
+.meta-grid dt {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--graphite);
+  margin-bottom: 4px;
+}
+
+.meta-grid dd {
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.project-card .chip-list {
+  margin-bottom: 14px;
+}
+
+.project-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+/* Resume checklist */
+.checklist {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 6px;
+}
+
+.checklist li {
+  position: relative;
+  padding-left: 30px;
+  max-width: 62ch;
+  font-size: 0.95rem;
+}
+
+.checklist li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 7px;
+  width: 14px;
+  height: 14px;
+  border: 1px solid var(--ink);
+  border-radius: 4px;
+}
+
+/* Project title links */
+.project-title-link:hover {
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* =========================================================
+   Arcade — playable game embeds (itch.io etc.)
+   ========================================================= */
+
+.arcade-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+.arcade-item {
+  border: 1px solid var(--ink);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: var(--surface);
+}
+
+.arcade-embed {
+  border: none;
+  border-bottom: 1px solid var(--ink);
+  border-radius: 0;
+  min-height: 167px;
+  aspect-ratio: auto;
+}
+
+.arcade-embed iframe {
+  width: 100%;
+  border: none;
+  display: block;
+}
+
+.arcade-caption {
+  padding: 14px 18px;
+  font-size: 0.9rem;
+}
+
+/* =========================================================
+   Responsive
+   ========================================================= */
+
+@media (max-width: 620px) {
+  main {
+    padding: 40px 20px 72px;
+  }
+
+  .main-nav {
+    padding: 22px 20px;
+    gap: 10px 20px;
+  }
+
+  .contacts {
+    padding: 30px 20px 44px;
+  }
+
+  .project-row {
+    grid-template-columns: 1fr;
+  }
+
+  .placeholder-visual {
+    max-width: 260px;
+  }
+
+  .project-card .placeholder-visual {
+    max-width: none;
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .corner-frame {
+    padding: 24px;
+  }
+
+  .greeting {
+    margin-bottom: 28px;
+  }
+
+  .featured-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .meta-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .project-body {
+    padding: 22px 20px;
+  }
+}
