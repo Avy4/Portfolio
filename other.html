@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <script defer src="CustomElements.js"></script>
+  <script defer src="GetAniListFavorites.js"></script>
   <import-fonts></import-fonts>
   <link rel="stylesheet" href="styles.css" />
 </head>
@@ -47,28 +48,13 @@
       </li>
     </ul>
 
-    <h2 class="section-title">What I&rsquo;m Learning</h2>
-    <ul class="playing-list">
-      <li class="placeholder">[Book, talk, article, or topic]</li>
-      <li class="placeholder">[Book, talk, article, or topic]</li>
-      <li class="placeholder">[Book, talk, article, or topic]</li>
-    </ul>
-
-    <h2 class="section-title">Links</h2>
-    <ul class="link-list">
-      <li>
-        <a href="#">
-          <span class="placeholder">A talk, essay, or tool that shaped how you design</span>
-          <span class="link-note placeholder">One line on why it&rsquo;s worth a look.</span>
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <span class="placeholder">Something you wrote or made elsewhere</span>
-          <span class="link-note placeholder">One line on why it&rsquo;s worth a look.</span>
-        </a>
-      </li>
-    </ul>
+    <h2 class="section-title">Bookshelf</h2>
+    <div class="bookshelf" id="bookshelf">
+      <p id="bookshelf-status" class="hint" role="status"></p>
+      <ul id="bookshelf-grid" class="bookshelf-grid" data-bookshelf-grid>
+        
+      </ul>
+    </div>
   </main>
 
   <custom-footer-template></custom-footer-template>

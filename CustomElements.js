@@ -109,7 +109,7 @@ class CustomHeader extends HTMLElement {
 
         this.innerHTML = `<header class="site-header"><nav class="main-nav">${stringBuilder}</nav></header>`
 
-        console.log(this.innerHTML);
+        // console.log(this.innerHTML);
         
     }
 }
