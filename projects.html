@@ -21,8 +21,8 @@
 
       </div>
       <div class="project-body">
-        <h2><a href="#" class="project-title-link"><span class="placeholder">SLORL</span></a></h2>
-        <p class="project-hook placeholder">
+        <h2><a href="#" class="project-title-link"><span>SLORL</span></a></h2>
+        <p class="project-hook">
           SLORL, an anagram of ROLLS. 
           Roll through twenty progressively more difficult levels and get to the portals at the end. 
           For an extra challenge, grab all the coins in each level. 
@@ -30,17 +30,18 @@
         </p>
 
         <dl class="meta-grid">
-          <div><dt>Role</dt><dd class="placeholder">Developer</dd></div>
-          <div><dt>Team</dt><dd class="placeholder">Solo</dd></div>
-          <div><dt>Engine / Tools</dt><dd class="placeholder">Unity, C#, Aseprite</dd></div>
-          <div><dt>Time</dt><dd class="placeholder">10 weeks</dd></div>
+          <div><dt>Role</dt><dd>Developer</dd></div>
+          <div><dt>Team Size</dt><dd>Solo</dd></div>
+          <div><dt>Engine / Tools</dt><dd>Unity, C#, Aseprite</dd></div>
+          <div><dt>Time</dt><dd>~10 weeks</dd></div>
         </dl>
 
         <ul class="chip-list" aria-label="Design areas">
           <li class="chip">Mechanic Design</li>
           <li class="chip">Level Design</li>
           <li class="chip">Art Design</li>
-          <li class="chip">API Integration</li>
+          <li class="chip">UI/UX</li>
+          <li class="chip">API & SDK Integration</li>
         </ul>
 
         <h3 class="mechanics-title">Key Mechanics</h3>
@@ -51,7 +52,7 @@
                 <!-- Replace the span with your gif: <img src="Assets/slorl-mechanic-1.gif" alt="Short description of the mechanic" loading="lazy"> -->
                 <span aria-hidden="true">GIF</span>
               </div>
-              <figcaption class="mechanics-caption placeholder"><strong>[Mechanic name]</strong> — one line on what it does.</figcaption>
+              <figcaption class="mechanics-caption"><strong>Player & Hat Teleportation:</strong> Swaps positions the player and the hat.</figcaption>
             </figure>
           </li>
           <li class="mechanics-item">
@@ -60,7 +61,7 @@
                 <!-- Replace the span with your gif: <img src="Assets/slorl-mechanic-2.gif" alt="Short description of the mechanic" loading="lazy"> -->
                 <span aria-hidden="true">GIF</span>
               </div>
-              <figcaption class="mechanics-caption placeholder"><strong>[Mechanic name]</strong> — one line on what it does.</figcaption>
+              <figcaption class="mechanics-caption"><strong>Hat Ramp:</strong> Using the hat as a ramp, the impossible becomes possible.</figcaption>
             </figure>
           </li>
           <li class="mechanics-item">
@@ -69,33 +70,57 @@
                 <!-- Replace the span with your gif: <img src="Assets/slorl-mechanic-3.gif" alt="Short description of the mechanic" loading="lazy"> -->
                 <span aria-hidden="true">GIF</span>
               </div>
-              <figcaption class="mechanics-caption placeholder"><strong>[Mechanic name]</strong> — one line on what it does.</figcaption>
+              <figcaption class="mechanics-caption"><strong>Buttons:</strong> Buttons can toggle walls, or it can spin them.</figcaption>
             </figure>
           </li>
         </ul>
 
         <details class="project-details" open>
-          <summary><span>Design breakdown</span><span class="details-hint">Decisions, challenges, outcome</span></summary>
+          <summary><span>Design breakdown</span><span class="details-hint">Key Decisions, Challenges, Outcomes</span></summary>
           <div class="details-body">
             <section class="breakdown-block">
               <h4>Key decisions</h4>
-              <ul class="breakdown-points placeholder">
-                <li><strong>Art style</strong> — I decided to go with a simple cutesy pixel art design since it made it easy to make all the artwork cohesive.
-                The color palette was one that I had found online.</li>
-                <li><strong>Mechanics</strong> — The swap mechanic was something I had in mind for a while, it just so happened that when combined with the rotation mechanic it turned out quite fun.
-                My favorite usage of the hat and rotation though are the interesting ways they interact with player movement. You can use the hat as a ramp to move in ways your player couldn't normally move.
-                This made for some interesting tech that some of the levels were based off of.</li>
+              <ul class="breakdown-points">
+                  <strong>Goal:</strong>
+                  <li>My plan for this game was to release it on web platforms like CoolMathGames and Armor Games.</li>
+                  <strong>Art style:</strong>
+                  <li>Chose a simple 2D pixel art reminicent of old flash games. (It would also fit in with other games on these platforms)</li>
+                  <li>Based all sprites off of three pastel color palettes, green -> cream, pink -> orange, and blue -> cream.  </li>
+                  <li>Enabled for easy sprite creation and simple animations.</li>
+                  <strong>Level Design:</strong> 
+                  <li>Every level is built off the same scene base.</li>
+                  <li>Makes it easy to create and iterate on different level flows and puzzles.</li>
+                  <li>The formula was to slowly introduce mechanics and combine these mechanics into progressively more difficult levels. </li>
               </ul>
             </section>
             <section class="breakdown-block">
               <h4>Challenges</h4>
-              <p class="placeholder">The most difficult part of developing SLORL was definitely level design.
-              Making twenty increasingly difficult and compelling levels took longer than I would like to admit.</p>
+                <ul class="breakdown-points">
+                  <strong>Level Design Difficulties:</strong>
+                  <strong>Teaching Mechanics</strong>
+                  <li>To cater to the intended playerbase (usually a younger demographic) I wanted to make game mechanics easy to learn and understand. </li>
+                  <li>To do this I ended up putting visuals in the background of certain "tutorial" levels.<strong> This is Something I would change!</strong></li>
+                  <li>Shoehorning visuals into the background of the levels is the least elegant method of teaching mechanics to the user. </li>
+                  <li>If I were to make another puzzle platformer, I think I would make levels specifically to teach mechanics.</li>
+                  <li>The distinction would be that rather than rather than building around a mechanic that is taught with visuals, I would build a level that guides the player towards discovering the mechanic themselves. </li>
+                  <strong>Compelling Levels</strong>
+                  <li>It's really very hard to make stages that are difficult, fun, but also mechanic dense. </li>
+                  <li>The formula was to slowly introduce mechanics and combine these mechanics into progressively more difficult levels. <strong> This is Something I would change!</strong></li>
+                  <li>With my current formula, I essentially made three or four levels in a row that depended on a specific mechanic. This led to some levels feeling one dimensional.</li>
+                  <li>While this worked for a short game like SLORL, in the future I would lean towards using mechanics as a toolbox for level building rather than basing whole levels off a single mechanic.</li>
+                  <strong>UI/UX:</strong>
+                  <li>I really don't like how the home screen turned out, specifically in the Armor Games version.</li>
+                  <li>The extra text and images required for branding make the homescreen look cluttered and ugly.</li>
+                  <li>Not too big of a deal since this is only in one version but moving forward I would definitely make a seperate screen for credits.</li>
+                </ul>
             </section>
             <section class="breakdown-block">
-              <h4>Outcome</h4>
-              <p class="placeholder">Sold a non-exclusive license to Armor Games, and got SLORL uploaded to other websites like Kongregate and Y8 Games.
-              Game did well for itself, definitely has some flaws but it currently sits around 10k plays and a 71% rating.</p>
+              <h4>Outcomes</h4>
+              <ul class="breakdown-points">
+                <li>An non-exclusive license was sold to Armor Games where it sits with ~10k plays and a 71% rating.</li>
+                <li>SLORL is also being hosted on Y8 games, and Kongregate where it gets less traffic.</li>
+                <li>While it didn't get accepted onto CoolMathGames, I think SLORL was a great learning opportunity. All things considered I would consider it a successful project!</li>
+              </ul>
             </section>
           </div>
         </details>
@@ -114,23 +139,25 @@
         
       </div>
       <div class="project-body">
-        <h2><a href="#" class="project-title-link"><span class="placeholder">Bounty</span></a></h2>
-        <p class="project-hook placeholder">
+        <h2><a href="#" class="project-title-link">Bounty</a></h2>
+        <p class="project-hook">
           Set in a magical forest, you play as a bounty hunter fighting against a horde of dangerous bugs.
-          Like many other popular rhythm games, you click to the beat in a four lane system. 
+          Finished playing the included map? Try making your own beatmaps, all you need is an .mp3 file and quick fingers! 
         </p>
 
         <dl class="meta-grid">
-          <div><dt>Role</dt><dd class="placeholder">Lead Developer</dd></div>
-          <div><dt>Team</dt><dd class="placeholder">Four</dd></div>
-          <div><dt>Engine / Tools</dt><dd class="placeholder">Unity, C#</dd></div>
-          <div><dt>Time</dt><dd class="placeholder">8 weeks</dd></div>
+          <div><dt>Role</dt><dd>Lead Developer</dd></div>
+          <div><dt>Team</dt><dd>Four</dd></div>
+          <div><dt>Engine / Tools</dt><dd>Unity, C#</dd></div>
+          <div><dt>Time</dt><dd>8 weeks</dd></div>
         </dl>
 
         <ul class="chip-list" aria-label="Design areas">
           <li class="chip">Mechanic Design</li>
-          <li class="chip">Custom Beatmap System</li>
-          <li class="chip">Unity Implementation</li>
+          <li class="chip">Scene Design</li>
+          <li class="chip">UI/UX</li>
+          <li class="chip">Custom Beatmap System (I/O)</li>
+          <li class="chip">Project Management</li>
         </ul>
 
         <h3 class="mechanics-title">Key Mechanics</h3>
@@ -141,7 +168,7 @@
                 <!-- Replace the span with your gif: <img src="Assets/bounty-mechanic-1.gif" alt="Short description of the mechanic" loading="lazy"> -->
                 <span aria-hidden="true">GIF</span>
               </div>
-              <figcaption class="mechanics-caption placeholder"><strong>[Mechanic name]</strong> — one line on what it does.</figcaption>
+              <figcaption class="mechanics-caption"><strong>[Mechanic name]</strong> — one line on what it does.</figcaption>
             </figure>
           </li>
           <li class="mechanics-item">
@@ -150,7 +177,7 @@
                 <!-- Replace the span with your gif: <img src="Assets/bounty-mechanic-2.gif" alt="Short description of the mechanic" loading="lazy"> -->
                 <span aria-hidden="true">GIF</span>
               </div>
-              <figcaption class="mechanics-caption placeholder"><strong>[Mechanic name]</strong> — one line on what it does.</figcaption>
+              <figcaption class="mechanics-caption"><strong>[Mechanic name]</strong> — one line on what it does.</figcaption>
             </figure>
           </li>
           <li class="mechanics-item">
@@ -159,32 +186,41 @@
                 <!-- Replace the span with your gif: <img src="Assets/bounty-mechanic-3.gif" alt="Short description of the mechanic" loading="lazy"> -->
                 <span aria-hidden="true">GIF</span>
               </div>
-              <figcaption class="mechanics-caption placeholder"><strong>[Mechanic name]</strong> — one line on what it does.</figcaption>
+              <figcaption class="mechanics-caption"><strong>[Mechanic name]</strong> — one line on what it does.</figcaption>
             </figure>
           </li>
         </ul>
 
         <details class="project-details">
-          <summary><span>Design breakdown</span><span class="details-hint">Decisions, challenges, outcome</span></summary>
+          <summary><span>Design breakdown</span><span class="details-hint">Team Breakdown, Highlighted Personal Contributions, Challenges, Outcomes</span></summary>
           <div class="details-body">
             <section class="breakdown-block">
-              <h4>My contributions</h4>
-              <p class="placeholder">My team was made up of artists so I ended up developing the vast majority of the actual game.
-              After we figured out our mechanics and systems I put it into C# code.
-              I had full control over how I did this which led to some badly made systems, but I iterated and figured out a system we were all happy with.
-              This was important since I needed my teamates who weren't accustomed to programming to understand as well.
-              I also created the actual Unity scenes and put the entire game together.</p>
-              <p class="placeholder">As a fun side mission over the summer, I decided to make a custom beatmap creator in the game itself.
-              Working with I/O isn't my forte (especially with how Unity handles music files) but I got it to work.
-              The system itself could use some work and more user options and control over beat timing but I am happy with the current state given the type of project this was.</p>
+              <h4>Team Breakdown</h4>
+              <ul class="breakdown-points">
+                <li>My roles on the team were that of the project manager and the lead developer.</li>
+                <li>We decided to play to our strengths when deciding our roles, but this essentially meant we had three artists.</li>
+                <li>They took care of the sprite work, the UI/UX images, and sound design.</li>
+                <li>My role was to decide on how mechanics would be implemented, implement the mechanics, and do scene setup.</li>
+              </ul>
             </section>
             <section class="breakdown-block">
-              <h4>Key decisions</h4>
-              <p class="placeholder">&hellip;</p>
+              <h4>Highlighted Personal Contributions</h4>
+              <ul class="breakdown-points">
+                <strong>Beatmap Creation Menu</strong>
+                <li>This is my favorite feature but it doesn't really have much to do with the mechanics of gameplay itself.</li>
+                <li>That being said, in my opinion it is an extremely important part of any rhythm game.</li>
+                <li>This feature allows for players to upload an .mp3 file and pop out beatmap .json that can be shared and played by anyone.</li>
+                <strong>Title Screen</strong>
+                <li>The title screen UI was entirely a team effort, but I wanted to highlight it here since it is in my opinion the best scene in the entire project.</li>
+                <li>While the sprite work was done by my very talented teammates, I gave important insight into what actually worked for a title screen.</li>
+                <li>Especially as it related to the more nitty gritty (i.e sprite dimensions, font choice, overall clarity)</li>
+              </ul>
             </section>
             <section class="breakdown-block">
               <h4>Challenges</h4>
-              <p class="placeholder">&hellip;</p>
+            </section>
+            <section class="breakdown-block">
+              <h4>Outcomes</h4>
             </section>
           </div>
         </details>
@@ -197,35 +233,27 @@
     </article>
 
   
-    <h2 class="section-title">Arcade</h2>
-    <p class="hint" style="margin-bottom: 16px;">
-      Playable games live here. To embed a game from itch.io: open your game&rsquo;s
-      itch.io page, click <em>Embed</em>, copy the snippet, and paste it inside one
-      of the <code>.arcade-embed</code> boxes below, replacing the placeholder.
-      Keep each description to one short sentence.
-    </p>
-    <!--
-      itch.io embed example — paste inside .arcade-embed:
-      <iframe src="https://itch.io/embed/1234567" width="552" height="167" frameborder="0"><a href="https://yourname.itch.io/your-game">Your Game by Avy</a></iframe>
-    -->
+    <h2 class="section-title">Arcade - Check out some of my Godot games here!</h2>
     <div class="arcade-grid">
       <figure class="arcade-item">
         <div class="arcade-embed placeholder-visual" aria-hidden="true">
-
+          <iframe frameborder="0" src="https://itch.io/embed/3243750?bg_color=113895&amp;fg_color=66b5f0&amp;link_color=6fff53&amp;border_color=333333" width="552" height="167">
+            <a href="https://avy4.itch.io/slime-adventure">
+              Slime Adventure - Slimer by Avy
+            </a>
+          </iframe>
         </div>
-        <figcaption class="arcade-caption placeholder">[Game name] &mdash; one short sentence on what it is.</figcaption>
+        <figcaption class="arcade-caption">Frogger, but you're going on a grand adventure as a slime.</figcaption>
       </figure>
       <figure class="arcade-item">
         <div class="arcade-embed placeholder-visual" aria-hidden="true">
-
+          <iframe frameborder="0" src="https://itch.io/embed/3208220?bg_color=32385f&amp;fg_color=FFA3DD&amp;link_color=5bfa63&amp;border_color=333333" width="552" height="167">
+            <a href="https://avy4.itch.io/frogs-and-cats-and-you">
+              Frogs and Cats and You by Avy
+            </a>
+          </iframe>
         </div>
-        <figcaption class="arcade-caption placeholder">[Game name] &mdash; one short sentence on what it is.</figcaption>
-      </figure>
-      <figure class="arcade-item">
-        <div class="arcade-embed placeholder-visual" aria-hidden="true">
-
-        </div>
-        <figcaption class="arcade-caption placeholder">[Game name] &mdash; one short sentence on what it is.</figcaption>
+        <figcaption class="arcade-caption">Jetpack Joyride, now with fabulous frogs and chaotic cats.</figcaption>
       </figure>
     </div>
   </main>

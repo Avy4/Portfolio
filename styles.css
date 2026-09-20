@@ -105,7 +105,7 @@ main > *:first-child {
 }
 
 .prose {
-  max-width: var(--prose-width);
+  max-width: none;
 }
 
 /* =========================================================
@@ -269,12 +269,25 @@ main > *:first-child {
   text-align: left;
   font-size: 1.25rem;
   line-height: 1.75;
-  max-width: var(--prose-width);
+  max-width: none;
 }
 
-.placeholder {
-  color: var(--graphite);
-  font-style: italic;
+.intro-list {
+  list-style-type: disc;
+  list-style-position: outside;
+  padding-left: 3rem;
+  margin: 12px 0;
+  font-size: 1.25rem;
+  line-height: 1.75;
+}
+
+.intro-list li {
+  display: list-item;
+  margin-bottom: 4px;
+}
+
+.intro-list li:last-child {
+  margin-bottom: 0;
 }
 
 /* =========================================================
@@ -331,7 +344,7 @@ main > *:first-child {
 
 .project-description {
   margin-bottom: 16px;
-  max-width: var(--prose-width);
+  max-width: none;
   font-size: 1.05rem;
 }
 
@@ -408,7 +421,7 @@ main > *:first-child {
   padding: 22px;
   font-size: 1.05rem;
   line-height: 1.75;
-  max-width: 70ch;
+  max-width: none;
 }
 
 .project-details .details-body p + p {
@@ -673,6 +686,16 @@ main > *:first-child {
   background: var(--surface);
 }
 
+/* Hard skills read as rectangles, soft skills as pills. */
+.chip--hard {
+  border-radius: var(--radius-sm);
+}
+
+.chip--soft {
+  border-radius: 999px;
+}
+
+
 /* Featured projects on home */
 .featured-grid {
   display: grid;
@@ -778,7 +801,7 @@ main > *:first-child {
 
 .project-hook {
   margin-bottom: 20px;
-  max-width: var(--prose-width);
+  max-width: none;
   font-size: 1.1rem;
   line-height: 1.75;
 }
