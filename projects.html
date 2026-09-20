@@ -99,13 +99,13 @@
                   <strong>Level Design Difficulties:</strong>
                   <strong>Teaching Mechanics</strong>
                   <li>To cater to the intended playerbase (usually a younger demographic) I wanted to make game mechanics easy to learn and understand. </li>
-                  <li>To do this I ended up putting visuals in the background of certain "tutorial" levels.<strong> This is Something I would change!</strong></li>
+                  <li>To do this I ended up putting visuals in the background of certain "tutorial" levels.<strong> This issomething I would change!</strong></li>
                   <li>Shoehorning visuals into the background of the levels is the least elegant method of teaching mechanics to the user. </li>
                   <li>If I were to make another puzzle platformer, I think I would make levels specifically to teach mechanics.</li>
                   <li>The distinction would be that rather than rather than building around a mechanic that is taught with visuals, I would build a level that guides the player towards discovering the mechanic themselves. </li>
                   <strong>Compelling Levels</strong>
                   <li>It's really very hard to make stages that are difficult, fun, but also mechanic dense. </li>
-                  <li>The formula was to slowly introduce mechanics and combine these mechanics into progressively more difficult levels. <strong> This is Something I would change!</strong></li>
+                  <li>The formula was to slowly introduce mechanics and combine these mechanics into progressively more difficult levels. <strong> This is something I would change!</strong></li>
                   <li>With my current formula, I essentially made three or four levels in a row that depended on a specific mechanic. This led to some levels feeling one dimensional.</li>
                   <li>While this worked for a short game like SLORL, in the future I would lean towards using mechanics as a toolbox for level building rather than basing whole levels off a single mechanic.</li>
                   <strong>UI/UX:</strong>
@@ -218,9 +218,35 @@
             </section>
             <section class="breakdown-block">
               <h4>Challenges</h4>
+              <ul class="breakdown-points">
+                <strong>Level Setup & Sprites</strong>
+                <li>One big issue we had were sprites, more specifically their dimensions.</li>
+                <li>At first this didnt really seem that big of a deal to us since we could scale images, but we soon realised this is not the case.</li>
+                <li>One specific issue came with our backgrounds, since we had different people working on different parts of the background their dimensions weren't the same.</li>
+                <li>Even if you tried to scale them, they didn't look consistently the same. <strong> This is something I would change!</strong></li>
+                <li>When doing a project by myself, I know what i'm working with as it relates to sprites so consistency isn't an issue.</li>
+                <li>The next time I work with a team though, something I would make sure of is that everyone is the on the same page when it relates to sprite consistency.</li>
+                <li>Specifically, on sprite dimensions, but also on color scheme, and overall theme.</li>
+                <strong>Beatmap System</strong>
+                <li>I recently had a teacher say that the first idea you think of is usually a bad idea.</li>
+                <li>In the case of how I designed the Beatmap system, I would say this is 100% true.</li>
+                <li>My first instinct was to use a scriptable object for each beat.</li>
+                <li>The idea behind this was that 1. You can see them in the inspector (which made it easier for my teammates to see what was going on) and 2. They are simple data containers.<strong> This is something I changed!</strong></li>
+                <li>This idea, though it did work was uneccesarily complicated.</li>
+                <li>A simple class would do the same job, the only drawback being you couldn't see them in the inspector.</li>
+                <li>I did some research and figured out I could just make my new data class serializable by adding the [System.Serializable] tag.</li>
+                <li>After making this change, the entire process was much more straightforward while still being easily readable for my teammates.</li>
+                <li>It also really drove home the point that when making a new mechanic I should think on it a litte bit instead of diving straight into development.</li>
+              </ul>
             </section>
             <section class="breakdown-block">
               <h4>Outcomes</h4>
+              <ul class="breakdown-points">
+                <li>This project was made for IMDM101 and it was well recieved by our professor.</li>
+                <li>The beatmap creation menu was an idea that he pitched, and I was kind of shocked I didn't think of it.</li>
+                <li>Working on this project was a fruitful experience, not only because I learned about more C# and Unity features but because it gave me a chance to work on a larger project alongside a team</li>
+                <li>Overall, I would say Bounty was an extremely successful project!</li>
+              </ul>
             </section>
           </div>
         </details>
