@@ -238,15 +238,15 @@ main > *:first-child {
 .corner-frame::before {
   top: 0;
   left: 0;
-  border-top: 2px solid var(--accent);
-  border-left: 2px solid var(--accent);
+  border-top: 4px solid var(--accent);
+  border-left: 4px solid var(--accent);
 }
 
 .corner-frame::after {
   bottom: 0;
   right: 0;
-  border-bottom: 2px solid var(--accent);
-  border-right: 2px solid var(--accent);
+  border-bottom: 4px solid var(--accent);
+  border-right: 4px solid var(--accent);
 }
 
 /* =========================================================
@@ -270,6 +270,10 @@ main > *:first-child {
   font-size: 1.25rem;
   line-height: 1.75;
   max-width: none;
+}
+
+.intro-box li {
+  margin-left: 36px;
 }
 
 .intro-list {
@@ -462,6 +466,7 @@ main > *:first-child {
 
 .breakdown-points li {
   position: relative;
+  margin-left: 24px;
   padding-left: 20px;
 }
 
@@ -474,6 +479,10 @@ main > *:first-child {
 
 .breakdown-points li strong {
   color: var(--ink);
+}
+
+.breakdown-points li.indent-2 {
+  margin-left: 68px;
 }
 
 .gallery-grid {
