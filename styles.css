@@ -629,14 +629,22 @@ main > *:first-child {
   margin-top: 3px;
 }
 
-.playing-list li {
-  padding: 16px 4px;
-  font-size: 1.1rem;
-  border-bottom: 1px solid var(--hairline);
+.playing-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
 }
 
-.playing-list li:last-child {
-  border-bottom: none;
+.playing-list li {
+  padding: 12px 22px;
+  font-size: 1.1rem;
+  border: 1px solid var(--ink);
+  border-radius: 999px;
+  background: var(--surface);
+}
+
+.playing-list a:hover {
+  color: var(--accent);
 }
 
 /* =========================================================
@@ -869,7 +877,7 @@ main > *:first-child {
 
 .mechanics-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(min(360px, 100%), 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr));
   gap: 20px;
   margin-bottom: 6px;
 }
@@ -884,6 +892,13 @@ main > *:first-child {
   aspect-ratio: 16 / 9;
   max-width: none;
   overflow: hidden;
+}
+
+.mechanics-gif a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  cursor: zoom-in;
 }
 
 .mechanics-gif img {
