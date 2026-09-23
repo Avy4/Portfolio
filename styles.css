@@ -332,6 +332,14 @@ main > *:first-child {
   justify-content: center;
   color: var(--graphite);
   background-color: rgba(238, 238, 238, 0.04);
+  overflow: hidden;
+}
+
+.placeholder-visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
 }
 
 .placeholder-visual svg {
