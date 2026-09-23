@@ -863,7 +863,7 @@ main > *:first-child {
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
-  margin-top: 20px;
+  margin: 0 0 20px;
 }
 
 /* Mechanics showcase — gif + one-line caption per mechanic */
@@ -948,6 +948,135 @@ main > *:first-child {
   color: var(--accent);
   text-decoration: underline;
   text-underline-offset: 3px;
+}
+
+/* Per-project color schemes sampled from each banner image.
+   SLORL banner: pale sage #D9E9CF, fill #B6CEB4, outline #96A78D.
+   Bounty banner: night forest #190E23/#291937, haze #553E5E, title pink #C77FB6. */
+#project-1 {
+  --proj: #B6CEB4;
+  --proj-ink: #1F2A1E;
+  --proj-soft: rgba(182, 206, 180, 0.12);
+  --proj-line: rgba(182, 206, 180, 0.55);
+}
+
+#project-2 {
+  --proj: #D99CCB;
+  --proj-ink: #2B1530;
+  --proj-soft: rgba(217, 156, 203, 0.12);
+  --proj-line: rgba(217, 156, 203, 0.55);
+}
+
+#project-1,
+#project-2 {
+  border: 1px solid var(--proj-line);
+  border-top: 5px solid var(--proj);
+  background: linear-gradient(var(--proj-soft), var(--proj-soft)), var(--surface);
+}
+
+#project-1 .project-media,
+#project-2 .project-media {
+  border-bottom-color: var(--proj-line);
+}
+
+#project-1 .project-title-link:hover,
+#project-2 .project-title-link:hover {
+  color: var(--proj);
+}
+
+#project-1 .meta-grid dt,
+#project-2 .meta-grid dt {
+  color: var(--proj);
+}
+
+#project-1 .meta-grid,
+#project-2 .meta-grid,
+#project-1 .mechanics-title,
+#project-2 .mechanics-title {
+  border-color: var(--proj-line);
+}
+
+#project-1 .chip,
+#project-2 .chip {
+  border-color: var(--proj-line);
+  background: var(--proj-soft);
+}
+
+#project-1 .btn,
+#project-2 .btn {
+  border-color: var(--proj);
+  background: var(--proj);
+  color: var(--proj-ink);
+}
+
+#project-1 .btn:hover,
+#project-2 .btn:hover {
+  background: transparent;
+  color: var(--proj);
+}
+
+#project-1 .btn-ghost,
+#project-2 .btn-ghost {
+  background: transparent;
+  border-color: var(--proj);
+  color: var(--proj);
+}
+
+#project-1 .btn-ghost:hover,
+#project-2 .btn-ghost:hover {
+  background: var(--proj);
+  border-color: var(--proj);
+  color: var(--proj-ink);
+}
+
+#project-1 .project-details,
+#project-2 .project-details {
+  border-color: var(--proj-line);
+}
+
+#project-1 .project-details summary:hover,
+#project-2 .project-details summary:hover {
+  color: var(--proj);
+}
+
+#project-1 .project-details summary:hover::after,
+#project-2 .project-details summary:hover::after {
+  border-color: var(--proj);
+  color: var(--proj);
+}
+
+#project-1 .project-details[open] summary::after,
+#project-2 .project-details[open] summary::after {
+  background-color: var(--proj);
+  border-color: var(--proj);
+  color: var(--proj-ink);
+}
+
+/* Featured cards on home reuse the same per-project variables
+   (the home cards share the #project-1 / #project-2 ids).
+   For a new project, copy a variable block above as #project-3
+   and add #project-3 to the selector lists here and above. */
+#project-1.featured-card,
+#project-2.featured-card {
+  border: 1px solid var(--proj-line);
+  border-top: 5px solid var(--proj);
+  background: linear-gradient(var(--proj-soft), var(--proj-soft)), var(--surface);
+}
+
+#project-1.featured-card .placeholder-visual,
+#project-2.featured-card .placeholder-visual {
+  border-color: var(--proj-line);
+}
+
+#project-1.featured-card .text-link,
+#project-2.featured-card .text-link {
+  border-color: var(--proj);
+}
+
+#project-1.featured-card .text-link:hover,
+#project-2.featured-card .text-link:hover {
+  color: var(--proj);
+  border-color: var(--proj);
 }
 
 /* =========================================================
