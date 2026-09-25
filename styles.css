@@ -7,6 +7,9 @@
    buttons, focus rings, the corner-frame motif, and quotes.
    ========================================================= */
 
+  
+
+
 * {
   margin: 0;
   padding: 0;
@@ -15,12 +18,12 @@
 
 :root {
   /* ---- Color: dark UI built from a 4-color palette ---- */
-  --paper: #303841;    /* page background */
-  --surface: #3A4750;  /* elevated surface — cards, chips, hairlines */
-  --ink: #EEEEEE;      /* primary text/foreground, light on dark */
-  --graphite: rgba(238, 238, 238, 0.78); /* muted/secondary text */
-  --hairline: rgba(238, 238, 238, 0.18); /* subtle dividers, visible on dark */
-  --accent: #D72323;   /* red — reserved for interactive/active moments */
+  --paper: #303841;   
+  --surface: #3A4750;  
+  --ink: #EEEEEE;    
+  --graphite: rgba(238, 238, 238, 0.78); 
+  --hairline: rgba(238, 238, 238, 0.18); 
+  --accent: #D72323;
 
   /* ---- Type ---- */
   /* FOT-Rodin ProN is a licensed Fontworks typeface — it isn't something
