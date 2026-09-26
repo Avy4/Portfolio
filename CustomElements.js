@@ -1,4 +1,4 @@
-class CustomFooter extends HTMLElement {
+﻿class CustomFooter extends HTMLElement {
     constructor() {
         super()
         this.innerHTML = `
