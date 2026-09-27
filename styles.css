@@ -1,9 +1,9 @@
 ﻿/* =========================================================
-   Avy â€” portfolio site
+   Avy — portfolio site
    Dark theme built from a 4-color palette:
    #303841 (background), #3A4750 (surface), #D72323 (accent),
    #EEEEEE (foreground). Accent is used only for interactive
-   and "special content" moments â€” nav active state, links,
+   and "special content" moments — nav active state, links,
    buttons, focus rings, the corner-frame motif, and quotes.
    ========================================================= */
 
@@ -26,7 +26,7 @@
   --accent: #D72323;
 
   /* ---- Type ---- */
-  /* FOT-Rodin ProN is a licensed Fontworks typeface â€” it isn't something
+  /* FOT-Rodin ProN is a licensed Fontworks typeface — it isn't something
      that can be embedded here, but it's declared first so any visitor
      (or you, the site owner) who already has it installed or synced via
      Adobe Fonts will see it automatically. M PLUS Rounded 1c is a free,
@@ -63,7 +63,7 @@ body {
   font-size: var(--fs-body);
   color: var(--ink);
   background-color: var(--paper);
-  /* A faint dot grid â€” a quiet nod to the dot-paper the original
+  /* A faint dot grid — a quiet nod to the dot-paper the original
      wireframes were sketched on. Barely visible by design. */
   background-image: radial-gradient(
     circle,
@@ -220,7 +220,7 @@ main > *:first-child {
 }
 
 /* =========================================================
-   Corner-bracket frame â€” the one recurring "bold" motif,
+   Corner-bracket frame — the one recurring "bold" motif,
    echoing the corner marks drawn around the wireframe's
    intro paragraph. Used sparingly (two spots on the site).
    ========================================================= */
@@ -443,7 +443,7 @@ main > *:first-child {
   margin-top: 12px;
 }
 
-/* Individual breakdown sections â€” labeled blocks divided by hairlines */
+/* Individual breakdown sections — labeled blocks divided by hairlines */
 .breakdown-block {
   padding: 18px 0;
 }
@@ -482,7 +482,7 @@ main > *:first-child {
 }
 
 .breakdown-points li::before {
-  content: "â€“";
+  content: "–";
   position: absolute;
   left: 0;
   color: var(--graphite);
@@ -651,7 +651,7 @@ main > *:first-child {
 }
 
 /* =========================================================
-   Game-design tailoring â€” new components
+   Game-design tailoring — new components
    ========================================================= */
 
 .eyebrow {
@@ -869,7 +869,7 @@ main > *:first-child {
   margin: 0 0 20px;
 }
 
-/* Mechanics showcase â€” gif + one-line caption per mechanic */
+/* Mechanics showcase — gif + one-line caption per mechanic */
 .mechanics-title {
   font-size: 1.25rem;
   font-weight: 700;
@@ -1083,7 +1083,7 @@ main > *:first-child {
 }
 
 /* =========================================================
-   Arcade â€” playable game embeds (itch.io etc.)
+   Arcade — playable game embeds (itch.io etc.)
    ========================================================= */
 
 .arcade-grid {
@@ -1119,7 +1119,7 @@ main > *:first-child {
 }
 
 /* =========================================================
-   Bookshelf (Other Stuff â€” AniList-ready, no fetch logic here)
+   Bookshelf (Other Stuff — AniList-ready, no fetch logic here)
    ========================================================= */
 
 .shelf-lede {
