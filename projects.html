@@ -261,7 +261,7 @@
     <h2 class="section-title">Arcade</h2>
     <p class="other-lede">Check out some of my Godot games here!</p>
     <div class="arcade-grid">
-      <figure class="arcade-item">
+      <figure class="arcade-item arcade-item--slime">
         <div class="arcade-embed placeholder-visual" aria-hidden="true">
           <iframe frameborder="0" src="https://itch.io/embed/3243750?bg_color=113895&amp;fg_color=66b5f0&amp;link_color=6fff53&amp;border_color=333333" width="552" height="167">
             <a href="https://avy4.itch.io/slime-adventure">
@@ -271,7 +271,7 @@
         </div>
         <figcaption class="arcade-caption">Frogger, but you're going on a grand adventure as a slime.</figcaption>
       </figure>
-      <figure class="arcade-item">
+      <figure class="arcade-item arcade-item--frogs">
         <div class="arcade-embed placeholder-visual" aria-hidden="true">
           <iframe frameborder="0" src="https://itch.io/embed/3208220?bg_color=32385f&amp;fg_color=FFA3DD&amp;link_color=5bfa63&amp;border_color=333333" width="552" height="167">
             <a href="https://avy4.itch.io/frogs-and-cats-and-you">
@@ -286,7 +286,7 @@
     <p class="other-lede">Smaller apps and experiments from inside and outside game dev.</p>
     <div class="other-grid">
       <!-- ============ NON-GAME TEMPLATE: copy this <article> for each project, then replace the placeholder text. To link the title, wrap it like the game cards: <h3><a href="YOUR-URL-HERE">Project title</a></h3> ============ -->
-      <article class="other-card">
+      <article class="other-card" id="other-jakes">
       <div class="other-body">
         <h3>Calculator for Jakes Ice Cream</h3>
         <p>A calculator app designed for differently abled users.</p>
@@ -300,9 +300,17 @@
         </ul>
         <a class="other-link" href="https://falconfirst.github.io" target="_blank" rel="noopener noreferrer">View Project Page &rarr;</a>
       </div>
+      <!-- Image area (right of the info). Pick ONE option, delete the other. -->
+      <div class="other-media other-media--single">
+
+        <a href="Assets/images/Jakes-Image.png" target="_blank" rel="noopener noreferrer" aria-label="Open full-size screenshot in new tab">
+          <img class="other-thumb other-thumb--page" src="Assets/images/Jakes-Image.png" alt="Full-page screenshot of the Jakes Ice Cream calculator app" loading="lazy">
+        </a>
+       
+      </div>
       </article>
 
-      <article class="other-card">
+      <article class="other-card" id="other-ten-step">
       <div class="other-body">
         <h3>Ten Step</h3>
         <p>A puzzle game where you only get ten steps. Simply wasn't fun.</p>
@@ -312,8 +320,18 @@
           <li>Now I graybox first and only commit to sprites and animation once the mechanic proves fun</li>
           <li>Built the character's animation state machine in Unity's Animator Controller</li>
           <li>My first foray into animations turned out ok if nothing else, so in that sense it was rewarding</li>
+          <li>I'm also quite proud of how it looks in general, I think the simple tiling and colors put the focus on the gameplay (even if the gameplay was boring)</li>
         </ul>
         <a class="other-link" href="https://avy4.itch.io/10step?secret=WPN8plX2sEdWKmevGwG9eudSkM" target="_blank" rel="noopener noreferrer">Play Build &rarr;</a>
+      </div>
+      <!-- Image area (right of the info). Pick ONE option, delete the other. -->
+      <div class="other-media other-media--single">
+        <a href="Assets/images/TenStep-Image-1.png" target="_blank" rel="noopener noreferrer" aria-label="Open full-size image in new tab">
+          <img class="other-thumb other-thumb--small" src="Assets/images/TenStep-Image-1.png" alt="Describe image 1" loading="lazy">
+        </a>
+        <a href="Assets/images/TenStep-Image-2.png" target="_blank" rel="noopener noreferrer" aria-label="Open full-size image in new tab">
+          <img class="other-thumb other-thumb--small" src="Assets/images/TenStep-Image-2.png" alt="Describe image 2" loading="lazy">
+        </a>
       </div>
       </article>
 
@@ -323,7 +341,29 @@
         <p>An interconnected platformer where tiles only exist when you interact with them.</p>
         <ul class="other-bullets">
           <li>Coming Soon</li>
+        </ul>
         <a class="other-link" href="" target="_blank" rel="noopener noreferrer">View Project Page &rarr;</a>
+      </div>
+      <!-- Image area (right of the info). Pick ONE option, delete the other. -->
+      <div class="other-media other-media--single">
+        <!-- OPTION 1: one full-webpage image (scaled down, whole page visible).
+             Uncomment and point src/href at your screenshot. -->
+        <!--
+        <a href="Assets/images/blurbys-dungeon-full.png" target="_blank" rel="noopener noreferrer" aria-label="Open full-size screenshot in new tab">
+          <img class="other-thumb other-thumb--page" src="Assets/images/blurbys-dungeon-full.png" alt="Full-page screenshot of Blurby's Ultimate Dungeon" loading="lazy">
+        </a>
+        -->
+        <!-- OPTION 2: several smaller images (2-per-row grid). Uncomment,
+             change this div's class to "other-media other-media--multi",
+             and duplicate one <a> block per image. -->
+        <!--
+        <a href="Assets/images/blurbys-dungeon-1.png" target="_blank" rel="noopener noreferrer" aria-label="Open full-size image in new tab">
+          <img class="other-thumb other-thumb--small" src="Assets/images/blurbys-dungeon-1.png" alt="Describe image 1" loading="lazy">
+        </a>
+        <a href="Assets/images/blurbys-dungeon-2.png" target="_blank" rel="noopener noreferrer" aria-label="Open full-size image in new tab">
+          <img class="other-thumb other-thumb--small" src="Assets/images/blurbys-dungeon-2.png" alt="Describe image 2" loading="lazy">
+        </a>
+        -->
       </div>
       </article>
 

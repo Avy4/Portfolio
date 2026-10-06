@@ -1115,7 +1115,20 @@ main > *:first-child {
 
 .arcade-caption {
   padding: 18px 24px;
-  font-size: 1rem;
+  font-size: 1.05rem;
+  font-weight: bold;
+}
+
+/* Caption boxes use each game's itch.io embed background color,
+   i.e. the backdrop behind the embed's title text. */
+.arcade-item--slime .arcade-caption {
+  background-color: #b1cfe8;
+  color: #205ce6;
+}
+
+.arcade-item--frogs .arcade-caption {
+  background-color: #eacadf;
+  color: #1e2448;
 }
 
 /* =========================================================
@@ -1216,11 +1229,28 @@ main > *:first-child {
 }
 
 .other-media {
-  flex: 0 0 240px;
+  flex: 0 0 280px;
   min-width: 0;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr;
   gap: 12px;
+  align-content: start;
+}
+
+/* No <img> yet (only usage comments) -> the column collapses and the
+   card reads exactly as before. Add an image to make the column appear. */
+.other-media:not(:has(img)) {
+  display: none;
+}
+
+/* Single full-webpage screenshot: one column, whole page scaled down. */
+.other-media--single {
+  grid-template-columns: 1fr;
+}
+
+/* Multiple smaller images: two-column grid of compact thumbs. */
+.other-media--multi {
+  grid-template-columns: repeat(2, 1fr);
 }
 
 .other-media a {
@@ -1228,14 +1258,48 @@ main > *:first-child {
   cursor: zoom-in;
 }
 
+.other-media figure {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 0;
+}
+
 .other-thumb {
   width: 100%;
   aspect-ratio: 4 / 3;
   object-fit: contain;
   display: block;
-  border: 1px solid var(--hairline);
+  border: 5px solid var(--hairline);
   border-radius: var(--radius-sm);
   background-color: rgba(238, 238, 238, 0.04);
+}
+
+/* Tall full-page screenshot: keep natural proportions so the entire
+   page stays visible, scaled down to the column width. There is no height cap:
+   a very long page renders at full height with no empty space; follow the link
+   for the full-size version. */
+.other-thumb--page {
+  aspect-ratio: auto;
+  height: auto;
+  max-height: none;
+  object-position: top center;
+  border-radius: 0;
+}
+
+/* Small grid images: natural proportions per image, so no letterbox
+   gaps inside the frame. Siblings can differ in height; that is fine. */
+.other-thumb--small {
+  aspect-ratio: auto;
+  height: auto;
+  border-radius: 0;
+}
+
+.other-caption {
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: var(--graphite);
 }
 
 .other-body {
@@ -1263,6 +1327,89 @@ main > *:first-child {
   position: absolute;
   left: 0;
   color: var(--graphite);
+}
+
+/* Ten Step: teal + coral theme. Teal carries the structure (frame,
+   markers); coral carries the identity (title, link). Mirrors the
+   per-project theming the game cards use. */
+#other-ten-step {
+  --proj: #45B8AC;
+  --proj-coral: #FF7B6B;
+  --proj-soft: rgba(69, 184, 172, 0.12);
+  --proj-line: rgba(69, 184, 172, 0.55);
+  border: 1px solid var(--proj-line);
+  border-top: 5px solid var(--proj);
+  background: linear-gradient(var(--proj-soft), var(--proj-soft)), var(--surface);
+}
+
+#other-ten-step h3 {
+  color: var(--ink);
+}
+
+#other-ten-step .other-body > p {
+  color: var(--proj-coral);
+}
+
+#other-ten-step .other-bullets li {
+  color: var(--ink);
+}
+
+#other-ten-step .other-bullets li::before {
+  color: var(--ink);
+}
+
+#other-ten-step .other-link {
+  border-color: var(--proj-coral);
+}
+
+#other-ten-step .other-link:hover {
+  color: var(--proj-coral);
+  border-color: var(--proj-coral);
+}
+
+#other-ten-step .other-thumb {
+  border-color: var(--proj-line);
+}
+
+/* Jakes calculator: green + silver theme. Silver carries the structure
+   (frame); green carries the identity (description, link). */
+#other-jakes {
+  --proj: #C9D1D3;
+  --proj-green: #6FCF6A;
+  --proj-soft: rgba(201, 209, 211, 0.12);
+  --proj-line: rgba(201, 209, 211, 0.55);
+  border: 1px solid var(--proj-line);
+  border-top: 5px solid var(--proj);
+  background: linear-gradient(var(--proj-soft), var(--proj-soft)), var(--surface);
+}
+
+#other-jakes h3 {
+  color: var(--ink);
+}
+
+#other-jakes .other-body > p {
+  color: var(--proj-green);
+}
+
+#other-jakes .other-bullets li {
+  color: var(--ink);
+}
+
+#other-jakes .other-bullets li::before {
+  color: var(--ink);
+}
+
+#other-jakes .other-link {
+  border-color: var(--proj-green);
+}
+
+#other-jakes .other-link:hover {
+  color: var(--proj-green);
+  border-color: var(--proj-green);
+}
+
+#other-jakes .other-thumb {
+  border-color: var(--proj-line);
 }
 
 @media (max-width: 620px) {
