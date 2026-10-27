@@ -67,7 +67,7 @@ class CustomHeader extends HTMLElement {
                     <a href="index.html" class="nav-link active">Home</a>
                     <a href="projects.html" class="nav-link">Projects</a>
                     <a href="resume.html" class="nav-link">Resume</a>
-                    <a href="other.html" class="nav-link">Fun Stuff</a>
+                    <a href="other.html" class="nav-link">About Me</a>
                 `
                 break;
             case "1":
@@ -75,7 +75,7 @@ class CustomHeader extends HTMLElement {
                     <a href="index.html" class="nav-link">Home</a>
                     <a href="projects.html" class="nav-link active">Projects</a>
                     <a href="resume.html" class="nav-link">Resume</a>
-                    <a href="other.html" class="nav-link">Fun Stuff</a>
+                    <a href="other.html" class="nav-link">About Mef</a>
 
                 `
                 break;
@@ -85,7 +85,7 @@ class CustomHeader extends HTMLElement {
                     <a href="index.html" class="nav-link">Home</a>
                     <a href="projects.html" class="nav-link">Projects</a>
                     <a href="resume.html" class="nav-link active">Resume</a>
-                    <a href="other.html" class="nav-link">Fun Stuff</a>
+                    <a href="other.html" class="nav-link">About Me</a>
                 `
                 break;          
             case "3":
@@ -94,7 +94,7 @@ class CustomHeader extends HTMLElement {
                     <a href="index.html" class="nav-link">Home</a>
                     <a href="projects.html" class="nav-link">Projects</a>
                     <a href="resume.html" class="nav-link">Resume</a>
-                    <a href="other.html" class="nav-link active">Fun Stuff</a>
+                    <a href="other.html" class="nav-link active">About Me</a>
                 `
                 break;
             default:
