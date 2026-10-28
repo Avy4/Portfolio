@@ -75,7 +75,7 @@ class CustomHeader extends HTMLElement {
                     <a href="index.html" class="nav-link">Home</a>
                     <a href="projects.html" class="nav-link active">Projects</a>
                     <a href="resume.html" class="nav-link">Resume</a>
-                    <a href="other.html" class="nav-link">About Mef</a>
+                    <a href="other.html" class="nav-link">About Me</a>
 
                 `
                 break;
